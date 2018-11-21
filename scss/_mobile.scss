@@ -79,4 +79,12 @@
   .projects {
     grid-template-columns: 1fr;
   }
+
+  h1,
+  h2 {
+    font-weight: 400;
+    &.lg-heading {
+      font-size: 5rem;
+    }
+  }
 }
