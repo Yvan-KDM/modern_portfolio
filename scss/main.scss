@@ -5,10 +5,11 @@
   box-sizing: border-box;
 }
 
+//body
 body {
   @include background();
-  background: $primary-color;
   background-position: cover;
+  background: $primary-color;
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
@@ -30,7 +31,7 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    background: rgba(lighten($primary-color, 5), 0.5);
   }
 }
 
@@ -63,6 +64,7 @@ main {
 
     a {
       padding: 0.4rem;
+      z-index: 2;
 
       &:hover {
         color: $secondary-color;
@@ -112,9 +114,16 @@ main {
   }
 
   .job {
-    background-color: lighten($primary-color, 5);
+    background-color: darken($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+
+    &:hover {
+      background-color: darken($primary-color, 9);
+      border-radius: 5px;
+      box-shadow: 3px 3px 3px black, -3px -3px 3px black;
+      @include easeOut;
+    }
   }
 }
 
@@ -126,12 +135,27 @@ main {
 
   img {
     width: 100%;
-    border: 3px #fff solid;
+    border: 2px #fff solid;
+    border-radius: 5px;
 
     &:hover {
-      opacity: 0.7;
+      opacity: 0.4;
       border-color: $secondary-color;
+      text-align: center;
+      font-weight: bold;
       @include easeOut;
+    }
+  }
+
+  .link-project {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    margin: 2px;
+
+    a {
+      text-align: center;
+      border-radius: 5px;
     }
   }
 }
@@ -147,9 +171,11 @@ main {
 
   div {
     font-size: 1.5rem;
-    border: 3px #fff solid;
-    padding: 1rem 2.5rem;
+    font-family: roboto;
+    border: 2px #fff solid;
+    padding: 1rem 2rem;
     margin-bottom: 3rem;
+    background: darken($primary-color, 5);
     @include easeOut;
 
     &:hover {
@@ -173,7 +199,6 @@ main {
   &:hover {
     background: $secondary-color;
     color: set-text-color($secondary-color);
-
     @include easeOut;
   }
 }
