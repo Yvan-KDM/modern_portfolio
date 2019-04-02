@@ -341,7 +341,11 @@ main {
     margin-top: 10vh; }
   .projects {
     grid-template-columns: 1fr;
-    margin: 5%; }
+    margin: 1%; }
+    .projects .btn-dark {
+      padding: 0.2rem 0.4rem; }
+    .projects .btn-light {
+      padding: 0.2rem 0.4rem; }
   h1,
   h2 {
     font-weight: 400; }
