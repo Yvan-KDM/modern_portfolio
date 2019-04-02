@@ -121,8 +121,9 @@ main {
     &:hover {
       background-color: darken($primary-color, 9);
       border-radius: 5px;
-      box-shadow: 3px 3px 3px black, -3px -3px 3px black;
-      @include easeOut;
+      background-color: #fff;
+      color: black;
+      transition: all 1s ease-in-out;
     }
   }
 }
@@ -132,10 +133,53 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+  box-sizing: border-box;
+
+  .div1 {
+    position: relative;
+    width: 100%;
+    font-size: 1rem;
+  }
+  .div2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $secondary-color;
+    border-radius: 5px;
+    margin: auto;
+    padding: 5%;
+    width: 100%;
+    height: 96%;
+    opacity: 0;
+    margin-bottom: 2%;
+    color: #fff;
+
+    &:hover {
+      opacity: 0.9;
+      border-color: $primary-color;
+      text-align: center;
+      transition: all 1s ease-in;
+    }
+
+    .link-project {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 5px;
+
+      a {
+        text-align: center;
+        border-radius: 5px;
+      }
+    }
+  }
 
   img {
     width: 100%;
+    height: 100%;
     border: 2px #fff solid;
+    border-bottom: 3px solid $secondary-color;
     border-radius: 5px;
 
     &:hover {
@@ -144,18 +188,6 @@ main {
       text-align: center;
       font-weight: bold;
       @include easeOut;
-    }
-  }
-
-  .link-project {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5px;
-    margin: 2px;
-
-    a {
-      text-align: center;
-      border-radius: 5px;
     }
   }
 }
@@ -170,11 +202,11 @@ main {
   margin-top: 1rem;
 
   div {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: roboto;
-    border: 2px #fff solid;
+    border: 1px #fff solid;
     padding: 1rem 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     background: darken($primary-color, 5);
     @include easeOut;
 
@@ -197,7 +229,7 @@ main {
   margin-bottom: 0.3rem;
 
   &:hover {
-    background: $secondary-color;
+    background: yellow;
     color: set-text-color($secondary-color);
     @include easeOut;
   }
@@ -222,5 +254,4 @@ main {
   color: set-text-color($primary-color);
   height: 60px;
 }
-
 @import "mobile";

@@ -192,16 +192,51 @@ main {
     .about-info .job:hover {
       background-color: #2d2d2d;
       border-radius: 5px;
-      box-shadow: 3px 3px 3px black, -3px -3px 3px black;
-      transition: all 0.5s ease-out; }
+      background-color: #fff;
+      color: black;
+      transition: all 1s ease-in-out; }
 
 .projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px; }
+  grid-gap: 20px;
+  box-sizing: border-box; }
+  .projects .div1 {
+    position: relative;
+    width: 100%;
+    font-size: 1rem; }
+  .projects .div2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eece1a;
+    border-radius: 5px;
+    margin: auto;
+    padding: 5%;
+    width: 100%;
+    height: 96%;
+    opacity: 0;
+    margin-bottom: 2%;
+    color: #fff; }
+    .projects .div2:hover {
+      opacity: 0.9;
+      border-color: #444;
+      text-align: center;
+      transition: all 1s ease-in; }
+    .projects .div2 .link-project {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 5px; }
+      .projects .div2 .link-project a {
+        text-align: center;
+        border-radius: 5px; }
   .projects img {
     width: 100%;
+    height: 100%;
     border: 2px #fff solid;
+    border-bottom: 3px solid #eece1a;
     border-radius: 5px; }
     .projects img:hover {
       opacity: 0.4;
@@ -209,14 +244,6 @@ main {
       text-align: center;
       font-weight: bold;
       transition: all 0.5s ease-out; }
-  .projects .link-project {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5px;
-    margin: 2px; }
-    .projects .link-project a {
-      text-align: center;
-      border-radius: 5px; }
 
 .boxes {
   display: flex;
@@ -225,11 +252,11 @@ main {
   align-items: center;
   margin-top: 1rem; }
   .boxes div {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: roboto;
-    border: 2px #fff solid;
+    border: 1px #fff solid;
     padding: 1rem 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     background: #373737;
     transition: all 0.5s ease-out; }
     .boxes div:hover {
@@ -245,7 +272,7 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #eece1a;
+    background: yellow;
     color: #000;
     transition: all 0.5s ease-out; }
 
@@ -268,11 +295,11 @@ main {
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
 
-@media screen and (min-width: 769px) and (max-width: 1170px) {
+@media screen and (min-width: 869px) and (max-width: 1170px) {
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 868px) {
   main {
     align-items: center;
     text-align: center; }
@@ -309,11 +336,12 @@ main {
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 640px) {
   main#home h1 {
     margin-top: 10vh; }
   .projects {
-    grid-template-columns: 1fr; }
+    grid-template-columns: 1fr;
+    margin: 10%; }
   h1,
   h2 {
     font-weight: 400; }
