@@ -80,7 +80,15 @@
 
   .projects {
     grid-template-columns: 1fr;
-    margin: 10%;
+    margin: 1%;
+
+    .btn-dark {
+      padding: 0.2rem 0.4rem;
+    }
+
+    .btn-light {
+      padding: 0.2rem 0.4rem;
+    }
   }
 
   h1,
