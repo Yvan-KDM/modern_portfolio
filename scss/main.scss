@@ -54,7 +54,7 @@ header {
 }
 
 main {
-  padding: 4rem;
+  padding: 5%;
   // height: 100;
 
   min-height: calc(100vh - 60px);
@@ -79,6 +79,10 @@ main {
       margin-top: 20vh;
     }
   }
+}
+
+.home {
+  padding: 4rem;
 }
 
 .about-info {
@@ -194,6 +198,9 @@ main {
 
 // Contact page
 
+#contact {
+  width: 100%;
+}
 .boxes {
   display: flex;
   flex-wrap: wrap;
@@ -201,7 +208,7 @@ main {
   align-items: center;
   margin-top: 1rem;
 
-  div {
+  .contact-div {
     font-size: 1.2rem;
     font-family: roboto;
     border: 1px #fff solid;
